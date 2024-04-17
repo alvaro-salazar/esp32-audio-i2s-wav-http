@@ -1,0 +1,39 @@
+# Node.js / Express-specific #
+##############################
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+yarn.lock
+.env
+.DS_Store
+
+# VSCode / PlatformIO-specific #
+################################
+# Ignore build output and intermediate files
+.pio/
+.pioenvs/
+.piobuild/
+.piolibdeps/
+.vscode/
+*.ini
+
+# Ignore sensitive or large files that shouldn't be committed
+*.pem
+*.log
+*.csv
+*.dat
+*.out
+*.pid
+*.key
+*.db
+*.sqlite
+
+# System-specific #
+###################
+*.swp
+*~
+.DS_Store
+Thumbs.db
+desktop.ini
