@@ -190,8 +190,8 @@ void micTask(void* parameter) {
     cliente.println("POST /uploadAudio HTTP/1.1");                          // Método POST y ruta del servidor 
     cliente.println("Content-Type: audio/wav");                             // Tipo de contenido de audio WAV
     cliente.println("Content-Length: " + String(recordBytes+HEADERSIZE));   // Usa el tamaño del archivo aquí
-    cliente.println("Host: " + String(serverName));
-    cliente.println("Connection: keep-alive");
+    cliente.println("Host: " + String(serverName));   // Especifica el host al que se está realizando la solicitud.
+    cliente.println("Connection: keep-alive");        // Establece la conexión para mantenerse viva después de que se complete la solicitud actual.
     cliente.println();                 // Línea en blanco para indicar el fin de las cabeceras HTTP
     cliente.write(header, HEADERSIZE); // Este es el body de la petición HTTP POST (la cabecera del archivo WAV)
     
